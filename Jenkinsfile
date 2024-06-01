@@ -1,10 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        label 'jenkins-docker'
+    }
     stages {
         stage("Build"){
-            agent {
-                label 'jenkins-docker'
-            }
             steps{
                 sh "docker --version"
             }

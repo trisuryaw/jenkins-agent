@@ -1,11 +1,9 @@
 pipeline {
-    agent {
-        label 'jenkins-docker'
-    }
+    agent any
     stages {
         stage("Build"){
             steps{
-                sh "docker --version"
+                sh "mvn --version"
             }
         }
     }

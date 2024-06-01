@@ -6,7 +6,7 @@ pipeline {
                 label 'jenkins-docker'
             }
             steps{
-                sh "docker build -t spring-app ."
+                sh "docker --version"
             }
         }
     }
